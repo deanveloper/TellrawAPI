@@ -7,15 +7,8 @@ import net.minecraft.server.v1_7_R1.PacketPlayOutChat;
 import org.bukkit.Bukkit;
 import org.bukkit.craftbukkit.v1_7_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class TellrawAPI extends JavaPlugin{
-	
-	@Override
-	public void onEnable(){
-		getLogger().info("Tellraw API has been enabled!");
-	}
-	
+public class TellrawAPI {
 	
 	public static StringBuilder finalize(StringBuilder...sb){
 		StringBuilder msg = new StringBuilder("{\"text\":\"\",\"extra\":[");
@@ -42,7 +35,6 @@ public class TellrawAPI extends JavaPlugin{
 		return msg;
 	}
 	public static void sendToAll(StringBuilder msg){
-		Bukkit.getLogger().info(msg.toString());
 		for(Player p:Bukkit.getOnlinePlayers()){
 			IChatBaseComponent comp = ChatSerializer.a(msg.toString());
 			PacketPlayOutChat packet = new PacketPlayOutChat(comp, true);
