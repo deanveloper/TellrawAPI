@@ -81,13 +81,8 @@ StringBuilder getStringBuilder() | Puts the finishing touches on the StringBuild
 Method (all are static)| Description
 -------|------------
 StringBuilder finalize(StringBuilder...sb) | Puts the proper prefix and suffix for each arg, and returns the final result
-
 StringBuilder finalize(TellrawParent tr) | Same as above, but you can instead just put the objects into it
-
 void sendToAll(StringBuilder msg) | Sends the JSON in the msg to every player
-
 void sendToAll(String msg) | If you either have your own string to send, or just like strings, you can use this
-
 void sendTo(StringBuilder msg, Player...players) | Sends to specified players
-
 void sendTo(String msg, Player...players) | Same but with strings
