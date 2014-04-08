@@ -1,29 +1,27 @@
-TellrawAPI
+# TellrawAPI
 ==========
-
-== TellrawAPI
 
 Chances are, if you are a server owner, you are simply here because one of your plugins rely on this plugin in order to function correctly. If you are a server owner, just put this in your plugins.
 If you are a developer, keep on reading to learn how to use this properly!
 
-=== Usage
+## Usage
 
 Create multiple objects that each contain StringBuilders. After you create all of them, you must finalize it (You can finalize multiple of them together). Then a method that lets you send the StringBuilder (or a string if that's your style) can let you either send it to either one, multiple, or all players!
 
 ----
-==== <<size 150%>>TellrawText<</size>>
+### TellrawText
 Constructors:\\
 (String text) - Normal, white, text\\
 (String text, ChatColor cc) - Add some color to your text!
 ----
-==== <<size 150%>>TellrawURL<</size>>
+### TellrawURL
 Constructors:\\
 (String text, URL url) - Prompt to open a URL when the text displays. Text is AQUA.\\
 (String text, String url) - Same as above.\\
 (String text, URL url, ChatColor cc) - Prompt to open a URL, custom ChatColor.\\
 (String text, String url, ChatColor cc) - Same as above
 ----
-==== <<size 150%>>TellrawCommand<</size>>
+### TellrawCommand
 Constructors:\\
 (String text, String chat) - Has the player send the chat message when they click the text. (Begin with '/' to have them run a command, they must have permission for it). Text is WHITE\\
 (String text, String chat, ChatColor cc) - Same as above, custom color\\
@@ -32,12 +30,12 @@ Constructors:\\
 (String text, Command cmd, ChatColor cc) - Run the command on click, no args, custom ChatColor\\
 (String text, Command cmd, String args, ChatColor cc) - Run the command on click, with args, custom ChatColor
 ----
-==== <<size 150%>>TellrawSuggest<</size>>
+### TellrawSuggest
 Constructors:\\
 (String text, String chat) - Puts the chat String in their message box when text is clicked, text is WHITE\\
 (String text, String chat, ChatColor cc) - Same as above, but with custom ChatColor
 ----
-==== <<size 150%>>TellrawParent<</size>>
+### TellrawParent<</size>>
 Each of the above classes extend this class!\\
 
 //Formats:// \\
@@ -57,7 +55,7 @@ setHover(Entity e) - Displays an entity's data when you hover (Will be available
 
 StringBuilder getStringBuilder() - Puts the finishing touches on the StringBuilder and returns the raw message. You still must finalize it before sending it
 ----
-==== <<size 150%>>TellrawAPI (Main class)<</size>>
+### TellrawAPI (Main class)
 static StringBuilder finalize(StringBuilder...sb) - Puts the proper prefix and suffix for each arg, and returns the final result
 static StringBuilder finalize(TellrawParent tr) - Same as above, but you can instead just put the objects into it
 static void sendToAll(StringBuilder msg) - Sends the JSON in the msg to every player
