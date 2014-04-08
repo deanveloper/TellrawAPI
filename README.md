@@ -77,14 +77,17 @@ StringBuilder getStringBuilder() | Puts the finishing touches on the StringBuild
 
 ----
 ### TellrawAPI (Main class)
-static StringBuilder finalize(StringBuilder...sb) - Puts the proper prefix and suffix for each arg, and returns the final result
 
-static StringBuilder finalize(TellrawParent tr) - Same as above, but you can instead just put the objects into it
+Method (all are static)| Description
+-------|------------
+StringBuilder finalize(StringBuilder...sb) | Puts the proper prefix and suffix for each arg, and returns the final result
 
-static void sendToAll(StringBuilder msg) - Sends the JSON in the msg to every player
+StringBuilder finalize(TellrawParent tr) | Same as above, but you can instead just put the objects into it
 
-static void sendToAll(String msg) - If you either have your own string to send, or just like strings, you can use this
+void sendToAll(StringBuilder msg) | Sends the JSON in the msg to every player
 
-static void sendTo(StringBuilder msg, Player...players) - Sends to specified players
+void sendToAll(String msg) | If you either have your own string to send, or just like strings, you can use this
 
-static void sendTo(String msg, Player...players) - Same but with strings
+void sendTo(StringBuilder msg, Player...players) | Sends to specified players
+
+void sendTo(String msg, Player...players) | Same but with strings
