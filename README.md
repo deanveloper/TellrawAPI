@@ -46,7 +46,7 @@ Constructor Syntax | Description
 (String text, String chat) | Puts the chat String in their message box when text is clicked, text is WHITE
 (String text, String chat, ChatColor cc) | Same as above, but with custom ChatColor
 ----
-### TellrawParent<</size>>
+### TellrawParent
 
 Each of the above classes extend this class
 
